@@ -16,3 +16,6 @@ venv/
 
 # Package manager specific
 package-lock.json
+
+.gemini/
+gha-creds-*.json
