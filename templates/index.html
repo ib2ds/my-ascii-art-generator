@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+    <style>
+        pre {
+            font-family: monospace;
+            white-space: pre;
+            background-color: #eee;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>ASCII Art Generator</h1>
+    <form action="/" method="post">
+        <label for="text_input">Enter Text:</label><br>
+        <input type="text" id="text_input" name="text_input" required><br><br>
+        
+        <label for="font_select">Select Font:</label><br>
+        <select id="font_select" name="font_select">
+            <option value="standard">Standard</option>
+            <option value="block">Block</option>
+            <option value="bubble">Bubble</option>
+            <option value="script">Script</option>
+            <option value="shadow">Shadow</option>
+        </select><br><br>
+        
+        <input type="submit" value="Generate ASCII Art">
+    </form>
+
+    {% if ascii_art %}
+    <h2>Your ASCII Art:</h2>
+    <pre>{{ ascii_art }}</pre>
+    {% endif %}
+</body>
+</html>
